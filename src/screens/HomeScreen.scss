@@ -1,3 +1,21 @@
 .home {
-    background-color: grey;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 7.5rem;
+
+    &__logo {
+        height: 25rem;
+    }
+
+    &__table {
+        font-size: 1.2rem;
+        text-align: center;
+
+        &__row {
+        }
+        &__data {
+            padding: 0.1rem 2rem;
+        }
+    }
 }

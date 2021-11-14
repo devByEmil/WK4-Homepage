@@ -1,12 +1,18 @@
-import React, { useState, createContext, useContext } from "react";
+import React, { useState, createContext, useContext, useMemo } from "react";
 
-const initalState = [];
+import { trainingTimes } from "@data";
+
+const initalState = {
+    trainingTimes: trainingTimes,
+};
 
 const Store = createContext();
 
 const Provider = (props) => {
     const [data, setData] = useState(initalState);
-    const contextValue = useMemo(() => [data, setData]);
+    const contextValue = useMemo(() => {
+        return { data, setData };
+    }, [data]);
 
     return (
         <Store.Provider value={contextValue}>{props.children}</Store.Provider>
