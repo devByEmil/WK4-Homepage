@@ -5,7 +5,12 @@ import "./HomeScreen.scss";
 const HomeScreen = (props) => {
     return (
         <div className="home">
-            <h1>Home</h1>
+            <img
+                className="home__logo"
+                src="../assets/vfs_logo.png"
+                alt="Logo"
+            />
+            <table className="home__table"></table>
         </div>
     );
 };
