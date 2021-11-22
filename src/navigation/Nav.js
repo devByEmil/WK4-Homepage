@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
 import "./Nav.scss";
+import logo from "../assets/vfs_logo.png";
 
 const Nav = (props) => {
     const location = useLocation();
@@ -11,11 +12,7 @@ const Nav = (props) => {
         <nav className={isHomeMode ? "navHome" : "nav"}>
             {!isHomeMode && (
                 <Link className="nav__start" to="/">
-                    <img
-                        src="../assets/vfs_logo.png"
-                        alt="Logo"
-                        className="nav__logo"
-                    />
+                    <img src={logo} alt="Logo" className="nav__logo" />
                 </Link>
             )}
             <div className={isHomeMode ? "navHome__links" : "nav__links"}>

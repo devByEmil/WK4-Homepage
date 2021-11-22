@@ -1,6 +1,7 @@
 import React from "react";
 
 import "./HomeScreen.scss";
+import logo from "../assets/vfs_logo.png";
 import { useStore } from "@context";
 
 const HomeScreen = (props) => {
@@ -8,11 +9,7 @@ const HomeScreen = (props) => {
 
     return (
         <div className="home">
-            <img
-                className="home__logo"
-                src="../assets/vfs_logo.png"
-                alt="Logo"
-            />
+            <img className="home__logo" src={logo} alt="Logo" />
             <table className="home__table">
                 <tbody>
                     {data.trainingTimes.map((item, index) => {
